@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           body{
+        border: 2px red solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+ img{
+        width: 100px;
+        height: 100px;
+        padding: 50px;
+        animation: fanrole linear infinite;
+
+    }
+    @keyframes fanrole{
+        100%{
+            transform: rotate(360deg); 
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="fan">
+        <img id="img" src="./image2.png" alt="fan">
+        <button onclick="fanon()">on</button>
+        <button onclick="fanoff()">off</button>
+        <button onclick="fan1()">1</button>
+        <button onclick="fan2()">2</button>
+        <button onclick="fan3()">3</button>
+    </div>
+    <script>
+        var a=document.getElementById('img');
+
+        function fanon() {
+            a.style.animationDuration=3+'s'
+        }function fan1() {
+            a.style.animationDuration=1+'s'
+        }function fan2() {
+            a.style.animationDuration=0.5+'s'
+        }function fan3() {
+            a.style.animationDuration=0.1+'s'
+        }function fanoff() {
+            a.style.animationDuration=0+'s'
+        }
+    </script>
+</body>
+</html>
